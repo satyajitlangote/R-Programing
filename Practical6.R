@@ -1,15 +1,10 @@
-#Check Armstrong Number
-num=as.integer(readline(prompt = "Enter a number: "))
-sum=0
-temp=num
-while(temp > 0) {
-  digit=temp %% 10
-  sum=sum+(digit ^ 3)
-  temp=floor(temp / 10)
-}
-if(num == sum) {
-  print(paste(num,"is an Armstrong number "))
-  
-} else {
-  print(paste(num,"is not an Arstrong number"))
-}
+# Design a visualization of your choice using the data and write a brief summary about why you chose that visualization. 
+#horsepower vs mieage 
+hpMpg <- mtcars[,c('hp','mpg')] 
+plot(x = hpMpg$hp,y = hpMpg$mpg, 
+     xlab = "Horse Power", 
+     ylab = "Milage", 
+     xlim = c(50,350), 
+     ylim = c(10,35),         
+     main = "Horsepower vs Milage" 
+) 
