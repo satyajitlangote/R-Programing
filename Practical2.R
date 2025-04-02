@@ -1,18 +1,8 @@
-#Check whether a number is prime or not 
-num=as.integer(readline(prompt = "Enter a number "))
-isPrime=0
-if(num > 1) {
-  isPrime=1
-  for (i in 2:(num - 1)) {
-    if((num %% i)==  0){
-      isPrime=0
-      break
-    }  
-  }
-}
-if(num == 2) isPrime=1
-if(isPrime == 1) {
-  print(paste(num,"is a prime number "))
-} else {
-  print(paste(num,"is not a prime nuber "))
-}
+#Create a pie chart showing the proportion of cars from the mtcars data set that have 
+# different carb values. 
+
+library(ggplot2) 
+ggplot(data=mtcars, aes(x = "", fill = factor(carb))) +  
+  geom_bar(width = 1) +  
+  coord_polar(theta = "y") + 
+  labs(x="", y="", title="Proportions of Cars by Carb Value")
